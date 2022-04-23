@@ -2,8 +2,7 @@ import React from 'react'
 import { useApp } from '../hooks/useApp'
 
 function Movie({data, detailsHandler, type}) {
-const { addFavMovies} = useApp()
-const { removeFavMovies} = useApp()
+const { addFavMovies, removeFavMovies} = useApp()
 
 const secondsToHM = (sec) => {
     var hours = Math.floor(sec / 60 / 60);

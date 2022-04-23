@@ -1,6 +1,9 @@
 import React from 'react'
+import { useApp } from '../hooks/useApp'
 
 function MovieDetail({movie,detailCloseHandler,sectionType}) {
+  const { addFavMovies, removeFavMovies} = useApp()
+
   return (
     <div className='detail_card'>
         <span className='detail_card-close' onClick={detailCloseHandler}>X</span>
@@ -15,8 +18,8 @@ function MovieDetail({movie,detailCloseHandler,sectionType}) {
             <div className='detail_card-directors'>Directors: {movie.info.directors.join(', ')}</div>
             {
               (sectionType !== 'fav')
-                ? <button className='detail_card-fav-btn movie_btn'>Add to Favorites</button>
-                : <button className='detail_card-fav-btn movie_btn'>Remove Favorites</button>
+                ? <button className='detail_card-fav-btn movie_btn' onClick={() => addFavMovies(movie)}>Add to Favorites</button>
+                : <button className='detail_card-fav-btn movie_btn' onClick={() => removeFavMovies(movie)}>Remove Favorites</button>
             }
         </div>
     </div>

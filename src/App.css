@@ -1,0 +1,179 @@
+.nav{
+    padding: 10px;
+    border-bottom:1px solid #2f2f2f;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:0 0 10px;
+}
+
+.auth_options{
+    display:flex;
+    gap:10px;
+    align-items:center;
+
+}
+
+.nav__btn{
+    outline:none;
+    padding:5px;
+    border-radius:5px;
+    color:#000;
+    background:#fff;
+    border:0;
+    cursor:pointer;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#e50914;
+}
+
+.user_info{
+    font-size:14px
+}
+
+.movie_section > div{margin:0 0 20px}
+
+.movie_genres{
+    padding:0 10px;
+    margin: 0 0 15px;
+    font-size:20px
+}
+
+.movie_list{
+    margin:0 10px;
+    overflow-x:auto;
+}
+
+.movie_list .row{
+    display: flex;
+    gap:10px;
+    align-items:stretch;
+}
+
+.movie_list .col{
+    flex:0 0 300px;
+    width:25%;
+    background-color:#000;
+    border: 1px solid #2f2f2f;
+}
+
+.movie_data{padding:10px}
+
+.movie_image_wrapper{
+    margin:0 0 10px
+}
+
+.movie_image{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.movie_actions_btns{
+    display:flex;
+    gap:10px
+}
+
+.movie_btn{
+    padding:5px;
+    border-radius:5px;
+}
+
+.detail_card{
+    position:fixed;
+    display:flex;
+    gap:15px;
+    flex-wrap:nowrap;
+    width:80%;
+    max-height:calc(100vh - 100px);
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    border:10px solid #fff;
+    background-color: #2f2f2f;
+    border-radius:10px;
+    padding:15px;
+    align-items: center;
+}
+
+.detail_card-close{
+    position:absolute;
+    top:0;
+    right:0;
+    width:25px;
+    max-height:25px;
+    background-color:#000;
+    border-radius:100%;
+    text-align:center;
+    padding-top:3px;
+    cursor:pointer;
+}
+
+.detail_card_img-wrapper{
+    width:25%;
+    flex:0 0 auto;
+    height:80%;
+}
+
+.detail_card_img-wrapper img{
+    object-fit: cover;
+    object-position: center;
+}
+
+.detail_card-title{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.register-user,.sign-in-user{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-user__form,
+.sign-in-user__form{
+    background-color: #000;
+    padding:30px 10px;
+    border-radius:10px;
+}
+
+.heading{
+    margin:0 0 15px;
+    font-size:18px;
+    font-weight:600
+}
+
+.form-group{
+    padding:0 20px;
+}
+
+.form-el{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin: 0 0 10px;
+}
+
+.form-el > *{
+    flex:1 1 50%;
+}
+
+.form-el input{padding:5px;border-radius:5px;}
+
+.reg_form_submit{
+    padding:7px 15px;
+    border-radius:5px;
+    border: 1px solid #2f2f2f;
+    background: #2f2f2f;
+    color:#fff
+}
+
+@media screen and (max-width:599px){
+    .movie_list .col{
+        flex:1 0 200px;
+    }
+}
